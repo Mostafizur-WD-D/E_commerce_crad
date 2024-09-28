@@ -1,0 +1,70 @@
+
+.E_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.buy-now-btn {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #cbd9db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 150px;
+}
+
+.buy-now-btn:hover {
+  background-color: #58aef9;
+}
+
+
+
+.card:hover .overlay {
+  opacity: 5;
+  transform: translateY(0);
+}
